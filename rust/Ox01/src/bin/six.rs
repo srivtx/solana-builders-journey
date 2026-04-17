@@ -8,10 +8,12 @@ fn main ( ) {
     name : String::from ( "srivx ") , 
     age : 22 ,
   }  ; 
-  pass_struct_print(user1);
+  pass_struct_print(&user1);
+
+  println!(" user age {}" , user1.age) ; 
 
 }
 
-fn pass_struct_print(str : User){
-   println!( " user name : {} user age : {}" , str.name ,str.age); 
+fn pass_struct_print(str : &User){
+   println!( " user name : {}" , str.name); 
 }
